@@ -1,9 +1,8 @@
 public class Container {
-    private double total, free;
+    private double free;
 
     public Container(double total)
     {
-        this.total = total;
         this.free = total;
     }
 
