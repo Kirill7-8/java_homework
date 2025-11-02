@@ -1,3 +1,5 @@
+package lab1.task2;
+
 import java.util.regex.Pattern;
 
 public class Main {
@@ -42,7 +44,7 @@ public class Main {
             myURL.setPage(Integer.parseInt(page));
             url = url.substring(page.length() + 1);
         }
-        String webpageName = urlArray[3].split("?")[0];
+        String webpageName = urlArray[3].split("\\?")[0];
         if (Pattern.matches("\\w+\\.{1}[a-z]+", webpageName))
         {
             myURL.setWebPageName(webpageName);
@@ -54,7 +56,7 @@ public class Main {
         if (url.contains("?"))
         {
             url = url.substring(1);
-            String[] params = url.split("&");
+            String[] params = url.split("\\&");
             for(String param : params)
             {
                 String key[] = param.split("=");

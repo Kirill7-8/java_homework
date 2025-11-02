@@ -1,3 +1,5 @@
+package lab1.task2;
+
 public class SimpleUrl {
     private String protocol; 
     private String address;
