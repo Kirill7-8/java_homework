@@ -15,7 +15,7 @@ public class Main {
                 String word = wordsCountScanner.nextLine();
                 if (!word.isEmpty()) {
                     wordList.add(word);
-                for(char c : word.toLowerCase().toCharArray()){
+                for(Character c : word.toLowerCase().toCharArray()){
                     if (Character.isLetter(c)) alphabet.add(c);
                 }
             }
@@ -25,6 +25,11 @@ public class Main {
             String[] words = wordList.toArray(new String[0]);
             
             DictionaryStatistic test = new DictionaryStatistic(words, alphabet, words.length);
+            test.printSymbolsStat();
+            System.out.println();
+            System.out.println(test.getRandomWord());
+            test.game();
+            
         } catch (FileNotFoundException e) {
             System.out.println("Файл dictionary.txt не найден!");
         }

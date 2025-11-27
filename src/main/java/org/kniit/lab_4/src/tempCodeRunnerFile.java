@@ -1,1 +1,1 @@
-wordsCount
+test.game();
